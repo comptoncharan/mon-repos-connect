@@ -1,38 +1,58 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Music, Users, Heart, HandHeart, Globe, ArrowRight } from "lucide-react";
+import {
+  Music,
+  Users,
+  User,
+  Heart,
+  HandHeart,
+  Globe,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ministries = [
   {
     id: 1,
     name: "Worship Team",
-    description: "Leading the congregation in praise and worship through music and song.",
+    description:
+      "Leading the congregation in praise and worship through music and song.",
     icon: Music,
   },
   {
     id: 2,
     name: "Youth Ministry",
-    description: "Empowering young people to grow in faith and become leaders.",
+    description:
+      "Empowering young people to grow in faith and become leaders.",
     icon: Users,
   },
   {
     id: 3,
     name: "Women's Ministry",
-    description: "Building a community of faith, support, and sisterhood among women.",
+    description:
+      "Building a community of faith, support, and sisterhood among women.",
     icon: Heart,
   },
   {
     id: 4,
     name: "Intercessory Team",
-    description: "Committed to prayer and spiritual warfare for the church and community.",
+    description:
+      "Committed to prayer and spiritual warfare for the church and community.",
     icon: HandHeart,
   },
   {
     id: 5,
     name: "Missions",
-    description: "Spreading the Gospel and serving communities locally and globally.",
+    description:
+      "Spreading the Gospel and serving communities locally and globally.",
     icon: Globe,
+  },
+  {
+    id: 6,
+    name: "Men’s Ministry",
+    description:
+      "Building strong men of faith through fellowship, discipleship, accountability, and service.",
+    icon: User,
   },
 ];
 
@@ -71,11 +91,11 @@ export function MinistriesSection() {
               <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold group-hover:shadow-gold transition-all duration-300">
                 <ministry.icon className="w-7 h-7 text-gold group-hover:text-primary transition-colors" />
               </div>
-              
+
               <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-gold transition-colors">
                 {ministry.name}
               </h3>
-              
+
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {ministry.description}
               </p>

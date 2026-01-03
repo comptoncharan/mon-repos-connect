@@ -174,17 +174,16 @@ const About = () => {
               </div>
               <div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                  Pastor James Williams
+                   Senior Pastor Rev. Victor Chatterpaul
                 </h3>
-                <p className="text-gold font-medium mb-6">Senior Pastor</p>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Pastor James has been faithfully serving Mon Repos Assembly of God for over 
-                    15 years. His passion for preaching the Word of God and caring for the 
+                    Pastor Victor has been faithfully serving Mon Repos Assembly of God for over 
+                    35 years. His passion for preaching the Word of God and caring for the 
                     congregation has made him a beloved leader in our community.
                   </p>
                   <p>
-                    He holds a degree in Theology and has been ordained with the Assemblies of God. 
+                    He holds a doctorate in Theology and has been ordained with the Assemblies of God. 
                     Together with his wife and family, he continues to lead our church in spiritual 
                     growth and community outreach.
                   </p>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Cross, MapPin, Phone, Mail, Facebook, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Youtube } from "lucide-react";
+
 
 export function Footer() {
   return (
@@ -9,9 +10,12 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
-                <Cross className="w-5 h-5 text-primary" />
-              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}church-logo.png`}
+                alt="Mon Repos Assembly of God logo"
+                className="w-10 h-10 object-contain"
+              />
+
               <div>
                 <h3 className="font-serif text-xl font-bold">Mon Repos</h3>
                 <p className="text-xs tracking-wider text-primary-foreground/70">Assembly of God</p>
@@ -45,15 +49,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li>
                 <span className="block font-medium text-primary-foreground">Sunday Worship</span>
-                9:00 AM & 6:00 PM
+                9:30 AM & 6:30 PM Martryville 
               </li>
               <li>
                 <span className="block font-medium text-primary-foreground">Wednesday Bible Study</span>
-                7:00 PM
+                6:30 PM Martryville & Jango Town
               </li>
               <li>
                 <span className="block font-medium text-primary-foreground">Friday Prayer Meeting</span>
-                7:00 PM
+                6:30 PM
               </li>
             </ul>
           </div>
@@ -68,7 +72,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="w-4 h-4 text-gold shrink-0" />
-                <span>623-1382</span>
+                <span>592-623-1382</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-gold shrink-0" />
@@ -77,7 +81,7 @@ export function Footer() {
             </ul>
             <div className="flex gap-4 mt-6">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/monreposaog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-gold hover:text-primary transition-all"

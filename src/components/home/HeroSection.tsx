@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-church.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32 lg:pt-36">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -22,12 +22,12 @@ export function HeroSection() {
       <div className="absolute bottom-1/4 right-10 w-48 h-48 border border-gold/20 rounded-full animate-float opacity-20" style={{ animationDelay: "2s" }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto w-full"
         >
           {/* Tagline */}
           <motion.p
@@ -85,17 +85,17 @@ export function HeroSection() {
           >
             <div className="text-center">
               <p className="text-xs text-primary-foreground/60 uppercase tracking-wider">Sunday</p>
-              <p className="text-primary-foreground font-semibold">9:00 AM</p>
+              <p className="text-primary-foreground font-semibold">9:30 AM</p>
             </div>
             <div className="w-px h-8 bg-primary-foreground/20" />
             <div className="text-center">
               <p className="text-xs text-primary-foreground/60 uppercase tracking-wider">Wednesday</p>
-              <p className="text-primary-foreground font-semibold">7:00 PM</p>
+              <p className="text-primary-foreground font-semibold">6:30 PM Martryville & Jango Town</p>
             </div>
             <div className="w-px h-8 bg-primary-foreground/20" />
             <div className="text-center">
               <p className="text-xs text-primary-foreground/60 uppercase tracking-wider">Friday</p>
-              <p className="text-primary-foreground font-semibold">7:00 PM</p>
+              <p className="text-primary-foreground font-semibold">6:30 PM</p>
             </div>
           </motion.div>
         </motion.div>

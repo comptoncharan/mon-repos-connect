@@ -6,23 +6,23 @@ import { Link } from "react-router-dom";
 const announcements = [
   {
     id: 1,
-    title: "Harvest & Thanksgiving Service",
-    date: "December 15, 2024",
-    description: "Join us for our annual Harvest & Thanksgiving celebration. Bring your tithes and offerings as we give thanks to God for His blessings.",
+    title: "Month of Prayer and Fasting",
+    date: "January 05, 2026",
+    description: "Join us for a powerful month of prayer and fasting as we seek God's face, direction, and breakthrough for the new year. Let's consecrate ourselves and draw closer to Him.",
     highlight: true,
   },
   {
     id: 2,
-    title: "Youth Christmas Program",
-    date: "December 22, 2024",
-    description: "Our youth ministry presents a special Christmas drama and musical celebration. All are welcome!",
+    title: "Annual Tea Party",
+    date: "February 21, 2026",
+    description: "Join us for an elegant evening of fellowship, refreshments, and celebration as we gather together for our beloved annual tea party tradition.",
     highlight: false,
   },
   {
     id: 3,
-    title: "New Year's Eve Service",
-    date: "December 31, 2024",
-    description: "Cross over into 2025 with prayer and praise. Service begins at 10:00 PM.",
+    title: "Good Friday Service",
+    date: "April 03, 2026",
+    description: "Reflect on the sacrifice of Christ and the power of the cross as we gather for a solemn morning of worship, communion, and remembrance.",
     highlight: false,
   },
 ];

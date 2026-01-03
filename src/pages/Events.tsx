@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 const events = [
   {
     id: 1,
-    title: "Harvest & Thanksgiving Service",
-    date: "December 15, 2024",
-    time: "9:00 AM",
+    title: "Month of Prayer and Fasting",
+    date: "January 05, 2026",
+    time: "6:30 PM",
     location: "Main Sanctuary",
-    description: "Join us for our annual Harvest & Thanksgiving celebration as we give thanks to God for His faithfulness throughout the year.",
+    description: "Join us for a powerful month of prayer and fasting as we seek God's face, direction, and breakthrough for the new year. Let's consecrate ourselves and draw closer to Him.",
     featured: true,
-    image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&q=80",
   },
   {
     id: 2,
@@ -217,7 +217,7 @@ const Events = () => {
               Follow us on Facebook to stay updated on all our events and activities.
             </p>
             <Button variant="gold" size="lg" asChild>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/monreposaog" target="_blank" rel="noopener noreferrer">
                 Follow Us on Facebook
               </a>
             </Button>

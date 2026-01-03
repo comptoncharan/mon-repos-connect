@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Cross } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/ministries", label: "Ministries" },
   { href: "/livestream", label: "Watch Live" },
   { href: "/contact", label: "Contact" },
+  { href: "/give", label: "Give Online" },
 ];
 
 export function Header() {
@@ -43,53 +44,49 @@ export function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className={cn(
-            "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
-            isScrolled ? "bg-gold" : "bg-gold"
-          )}>
-            <Cross className={cn(
-              "w-5 h-5 transition-colors",
-              isScrolled ? "text-primary" : "text-primary"
-            )} />
-          </div>
-          <div className="flex flex-col">
-            <span className={cn(
-              "font-serif text-lg font-bold leading-tight transition-colors",
-              isScrolled ? "text-foreground" : "text-primary-foreground"
-            )}>
-              Mon Repos
-            </span>
-            <span className={cn(
-              "text-xs font-sans tracking-wider uppercase transition-colors",
-              isScrolled ? "text-muted-foreground" : "text-primary-foreground/80"
-            )}>
-              Assembly of God
-            </span>
-          </div>
-        </Link>
-
+        <Link to="/" className="flex items-center gap-3">
+  <div
+    className={cn(
+      "flex items-center justify-center rounded-full transition-all duration-300",
+      isScrolled
+        ? "bg-white shadow-md w-12 h-12"
+        : "bg-transparent w-12 h-12"
+    )}
+  >
+    <img
+      src={`${import.meta.env.BASE_URL}church-logo.png`}
+      alt="Mon Repos Assembly of God Church"
+      className="w-9 h-9 object-contain"
+    />
+  </div>
+</Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={cn(
-                "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
-                location.pathname === link.href
-                  ? isScrolled
-                    ? "text-gold bg-gold/10"
-                    : "text-gold bg-primary-foreground/10"
-                  : isScrolled
-                    ? "text-foreground/70 hover:text-foreground hover:bg-muted"
-                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+  {navLinks.map((link) => {
+    const isGive = link.label === "Give Online";
+
+    return (
+      <Link
+        key={link.href}
+        to={link.href}
+        className={cn(
+          "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
+          isGive
+            ? "bg-gold text-primary hover:bg-gold/90 ml-2"
+            : location.pathname === link.href
+            ? isScrolled
+              ? "text-gold bg-gold/10"
+              : "text-gold bg-primary-foreground/10"
+            : isScrolled
+            ? "text-foreground/70 hover:text-foreground hover:bg-muted"
+            : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+        )}
+      >
+        {link.label}
+      </Link>
+    );
+  })}
+</nav>
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
